@@ -1,0 +1,13 @@
+version: "2"
+services:
+  svn:
+    image: shukriadams/subversion-edge:latest
+    container_name: svn
+    restart: unless-stopped
+    volumes:
+      - ./data:/opt/csvn/data:rw
+    ports:
+    - "3343:3343"
+    - "4434:4434"
+    - "18080:18080"
+    - "18081:18081"
